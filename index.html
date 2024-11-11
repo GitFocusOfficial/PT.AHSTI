@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT.AHSTI Login</title>
+  <link rel="icon" href="images/ptahsti.jpg" type="image/jpg">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-image">
+      <img src="./images/ptahsti.jpg" alt="PTAHSTI">
+    </div>
+    <div class="login-form">
+      <h2>Login</h2>
+      <form action="./pages/landing.html" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="captcha">Captcha:</label>
+        <input type="text" id="captcha" name="captcha" required>
+        
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
