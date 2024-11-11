@@ -3,13 +3,14 @@
     width: 100%;
     text-align: center;
     padding-top: 20px;
-  }
-  
-  h2 {
+}
+
+h2 {
     color: #333;
-  }
-  
-  .node {
+    margin-bottom: 40px;
+}
+
+.node {
     display: inline-block;
     padding: 10px 20px;
     margin: 10px;
@@ -17,34 +18,74 @@
     color: white;
     border-radius: 8px;
     cursor: pointer;
-  }
-  
-  .node a {
+}
+
+.node a {
     color: white;
     text-decoration: none;
-  }
-  
-  .line {
+}
+
+.line {
     width: 2px;
     height: 50px;
-    background-color: #333;
+    background-color: #ffffff;
     margin: 10px auto;
-  }
-  
-  .departments {
+}
+
+.ex {
+    width: 2px;
+    height: 110px;
+    background-color: #ffffff;
+    margin: 10px auto;
+}
+
+/* Container for .horizontal-right to control its positioning */
+.horizontal-right-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end; /* Aligns .horizontal-right to the right */
+    position: relative; /* Keep positioning within this container */
+    margin-right: 255px; /* Adjust spacing as needed */
+    top: -10px; /* Adjust to match vertical alignment */
+}
+
+.horizontal-right {
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+/* Styling for departments section */
+.departments {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Aligns departments at the top */
     width: 80%;
     margin: 0 auto;
-  }
-  
-  .department-left, .department-right {
+    gap: 20px; /* Add space between left and right columns */
+    margin-top: 40px; /* Add top margin to create space between departments and horizontal line */
+}
+
+/* Aligning department columns */
+.department-left, .department-right {
     display: flex;
     flex-direction: column;
-  }
-  
-  .vertical {
-    height: 150px;
-    margin-top: 0;
-  }
-  
+    align-items: center; /* Center-align items within each column */
+    width: 45%; /* Adjust width to allow ample space between columns */
+}
+
+/* Adjust right-side alignment for specific nodes */
+#audit {
+    position: absolute;
+    top: 400px; /* Adjust as necessary to align with Executive */
+    right: 20%;
+}
+
+/* Additional adjustments */
+.horizontal-center {
+    width: 600px;
+    height: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 400px; /* Adjust as needed */
+    top: 510px;   /* Adjust to match vertical alignment */
+}
