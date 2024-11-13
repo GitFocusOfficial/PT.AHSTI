@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Styles to make footer stick to the bottom */
+    display: flex; /* Styles to make footer stick to the bottom */
+    flex-direction: column; /* Styles to make footer stick to the bottom */
+  }
+  
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .enter-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    background-color: #333; /* Navbar styling */
+    padding: 10px; /* Navbar styling */
+    flex-wrap: wrap; /* Make the Navbar available on smaller screen */
+  }
+  
+  .navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff; /* Navbar styling */
+    font-weight: bold;
+    padding: 10px 15px; /* Navbar styling */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Navbar styling */
+  }
+  
+  .navbar a:hover {
+    background-color: #555; /* Highlight color on hover */
+    color: #FFD700; /* Optional: change text color on hover */
+  }
+
+  /* Hover effect for navbar links */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    flex: 1; /* Styles to make footer stick to the bottom */
+    background-image: url('../images/ptahsti.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .content-table {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white overlay for readability */
+    border-collapse: collapse;
+  }
+  
+  .page-header, .page-footer {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .table-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .table-container .content-table {
+    width: 80%;
+    border-spacing: 0;
+  }
+  
+  .content-table th, .content-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: #333; /* Text for the Category */
+  }
+  
+  .content-table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .img-clickable {
+    width: 30px; /* Image inside each row */
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .img-clickable:hover {
+    transform: scale(1.1);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #333;
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ddd;
+  }
+  
+  .modal img {
+    max-width: 70%;
+    border-radius: 10px;
+  }
+  
+  .modal .description {
+    margin-left: 20px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    font-size: 3.0em;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Styles for Modal Content */
+  .modal .description p {
+    margin-bottom: 10px; /* Adds space between each text line */
+  }
+
+  .modal .description #image-desc {
+    font-size: 1.1em;
+    margin-bottom: 15px; /* Adds extra space for readability */
+  }
+
+  .modal .description #image-amount,
+  .modal .description #image-chknumber,
+  .model .description #image-payee,
+  .model .description #image-cvdocno,
+  .model .description #image-chkdate, {
+    font-weight: bold;
+  }
+
+  /* Add background color to the page footer */
+  .page-footer {
+    background-color: #333; /* Same as navbar or a different color */
+    color: white;
+    padding: 10px 20px;/* Styles to make footer stick to the bottom */
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-left, .footer-right {
+    flex: 1;
+  }
+
+  .footer-left p, .footer-right p {
+    margin: 5px 0;
+  }
+  
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+
+  /* Default styles for larger screens */
+.navbar, .content-container, .page-footer {
+  padding: 20px;
+  /* other styles */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navbar, .content-container, .page-footer {
+      padding: 10px;
+  }
+
+  .navbar a {
+      display: block;
+      padding: 8px;
+      text-align: center;
+      width: 100%; /* Stack links vertically */
+  }
+
+  .content-container {
+      display: block;
+      width: 100%;
+  }
+
+  .content-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar a {
+    display: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.content-container, .navbar, .page-footer {
+  width: 100%;
+  max-width: 100%;
+}
